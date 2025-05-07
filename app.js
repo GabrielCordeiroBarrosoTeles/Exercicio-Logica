@@ -2,11 +2,11 @@
     Questão 1:
     Escreva um programa que solicite ao usuário um número de 1 a 7 e informe o dia 
     correspondente da semana (por exemplo, 1 para segunda-feira, 2 para terça-feira, etc.).
-*/
+
 
 const readline = require('readline-sync');
 
-var diaSemana = ['domingo', 'segunda-feira', 'terça-feira', 'quarta-feira', 'quinta-feira', 'sexta-feira', 'sábado'];
+const diaSemana = ['domingo', 'segunda-feira', 'terça-feira', 'quarta-feira', 'quinta-feira', 'sexta-feira', 'sábado'];
 var dia = Number(readline.question("Informe um numero de 1 a 7:"));
 
 if (dia >= 1 && dia <= 7) {
@@ -35,7 +35,7 @@ if (dia >= 1 && dia <= 7) {
     }
 
 }
-
+*/
 
 /*
     Questão 2:
@@ -44,7 +44,7 @@ if (dia >= 1 && dia <= 7) {
     R) Read	(Buscar/Ler)
     U) Update	(Editar/Atualizar)
     D) Delete	(Excluir/Apagar)
-*/
+
 
 const readline = require('readline-sync');
 
@@ -67,7 +67,7 @@ switch (opc){
     default:
         console.log("Algo de errado nao esta certo ;-;")
 }
-
+*/
 
 /*
     Questão 3:
@@ -76,7 +76,7 @@ switch (opc){
     n < 5                       100
     5 ≤ n < 10                  95
     n ≥ 10                      90 
-*/
+
 
 const vendaHotDogs = (qtd_hotdogs) => {
     let preco = 0;
@@ -93,14 +93,14 @@ const vendaHotDogs = (qtd_hotdogs) => {
 
 // Teste 
 console.log(vendaHotDogs(5)) 
-
+*/
 
 /*
     Questão 4:
     Escreva uma função que remova todas as vogais de uma string de entrada.
     Exemplo:
     "This website is for losers LOL!" => "Ths wbst s fr lsrs LL!"
-*/
+
 
 const removeVogais = (str) => {
     //g: O modificador g significa global. 
@@ -110,7 +110,7 @@ const removeVogais = (str) => {
 
 // Teste
 console.log(removeVogais("This website is for losers LOL!"))
-
+*/
 
 /*
     Questão 5:
@@ -119,7 +119,7 @@ console.log(removeVogais("This website is for losers LOL!"))
     Dois números
     operador aritmético
     A partir desta função retorne o cálculo desejado com os dois números
-*/
+
 
 const calc = (n1, n2, operador) => {
     switch (operador){
@@ -140,13 +140,13 @@ console.log(calc(10, 5, '+'))
 console.log(calc(10, 5, '-'))
 console.log(calc(10, 5, '*'))
 console.log(calc(10, 5, '/'))
-
+*/
 
 /*
     Faça um programa que leia 7 nomes de pessoas e guarde-os em um vetor. 
     No final, mostre uma listagem com todos os nomes informados, na ordem 
     inversa daquela em que eles foram informados.
-*/
+
 
 const readline = require('readline-sync');
 
@@ -160,12 +160,12 @@ console.log("Nomes informados na ordem inversa:");
 for (let i = 6; i>=0; i--){
     console.log(nomes[i]);
 }
-
+*/
 
 /*
     Questão 7:
     Crie um jogo de JoKenPo (Pedra-Papel-Tesoura)
-*/
+
 
 const readline = require('readline-sync');
 
@@ -187,7 +187,7 @@ const jokenpo = (opcaoUsuario) => {
 // Teste
 var opc = parseInt(readline.question("Escolha uma opcao:\n0) Pedra\n1) Papel\n2) Tesoura\n"), 10);
 console.log(jokenpo(opc));
-
+*/
  
 
 /*
@@ -196,7 +196,7 @@ console.log(jokenpo(opc));
     Caso ultrapasse 80 Km, exiba uma mensagem dizendo que o usuário 
     foi multado. Nesse caso, exiba o valor damulta, cobrando R$ 5,00 por 
     cada Km acima da velocidade permitida.
-*/
+
 
 const readline = require('readline-sync');
 
@@ -208,7 +208,7 @@ if( velocidade > 80){
 }else{
     console.log("Você não foi multado")
 }
-
+*/
 
 /*
     Questão 9:
@@ -216,7 +216,7 @@ if( velocidade > 80){
     Pergunte a quantidade de cigarros fumados por dias e quantos anos ele já fumou. 
     Considere que um fumante perde 10 min de vida a cada cigarro. 
     Calcule quantos dias de vida um fumante perderá e exiba o total em dias.
-*/
+
 
 const readline = require('readline-sync');
 
@@ -231,7 +231,7 @@ var minutosPerdidos = cigarros * 10 * dias; // 10 minutos por cigarro
 var diasPerdidos = minutosPerdidos / (60 * 24); // 60 minutos em uma hora e 24 horas em um dia
 
 console.log(`O fumante perderá ${diasPerdidos} dias de vida.`);
-
+*/
 
 /*
     Questão 10:
@@ -249,7 +249,7 @@ console.log(`O fumante perderá ${diasPerdidos} dias de vida.`);
     Carros de luxo
         Até 200 Km percorridos: R$ 0,30 por Km
         Acima de 200 Km percorridos: R$ 0,25 por Km
-*/
+
 
 const readline = require('readline-sync');
 
@@ -291,7 +291,7 @@ if (tipoCarro === 'popular'){
 }
 
 console.log("O preço a ser pago é: R$ " + preco.toFixed(2));
-
+*/
 
 
 /*
@@ -302,7 +302,7 @@ console.log("O preço a ser pago é: R$ " + preco.toFixed(2));
     A media dos numeros
     A ordem crescente dos numeros
 
-*/
+
 
 const readline = require('readline-sync');
 
@@ -343,16 +343,16 @@ const media = (array) => {
 }
 
 const crescente = (array) => {
-    /*
-        A função array.sort((a, b) => a - b) é usada para ordenar os elementos de um array em ordem crescente.
-        O método sort() aceita uma função de comparação como argumento.
 
-        A função de comparação (a, b) => a - b compara dois elementos do array:
-            - Se a - b for negativo, 'a' será colocado antes de 'b'.
-            - Se a - b for positivo, 'b' será colocado antes de 'a'.
-            - Se a - b for zero, a ordem entre 'a' e 'b' permanece inalterada.
-        Isso resulta em uma ordenação numérica crescente.
-    */
+        // A função array.sort((a, b) => a - b) é usada para ordenar os elementos de um array em ordem crescente.
+        // O método sort() aceita uma função de comparação como argumento.
+
+        // A função de comparação (a, b) => a - b compara dois elementos do array:
+            // - Se a - b for negativo, 'a' será colocado antes de 'b'.
+            // - Se a - b for positivo, 'b' será colocado antes de 'a'.
+            // - Se a - b for zero, a ordem entre 'a' e 'b' permanece inalterada.
+        // Isso resulta em uma ordenação numérica crescente.
+    
     return array.sort((a, b) => a - b);
 }
 
@@ -361,5 +361,148 @@ console.log("A soma dos numeros é: " + soma(numeros));
 console.log("Os numeros pares dentro da array são: " + pares(numeros));
 console.log("A media dos numeros é: " + media(numeros));
 console.log("A ordem crescente dos numeros é: " + crescente(numeros));
+*/
 
+
+
+/*
+    Crie uma função que retorne a quantidade de itens de um array
+    (não pode usar length)
+
+const readline = require('readline-sync');
+
+const qtd_itens = (array) => {
+    let contador = 0;
+    for (let i = 0; array[i] !== undefined; i++){
+        contador++;
+    }
+    return contador;
+}
+// Teste
+console.log(qtd_itens([1,4,2,6,8,4]));
+*/
+
+/*
+    Crie uma função que retorne todos os números pares deste array [1,2,3,4,5,6,7,8,9,10]
+    (não pode usar filter)
+
+const readline = require('readline-sync');
+
+const numerosPares = (array) => {
+    let pares = [];
+
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] % 2 === 0) {
+            pares.push(array[i]);
+        }
+    }
+    return pares;
+}
+// Teste
+console.log(numerosPares([1,2,3,4,5,6,7,8,9,10]));
+*/
+
+/*
+    Crie uma função que transforme frases de snake_case para camelCase
+    (não pode usar replace, split, join)
+
+const snakePraCamel = (str) => {
+    let resultado = '';
+    let letraMaiuscula = false;
+    for (let i = 0; i < str.length; i++) {
+        // Verifica se o caractere atual é um underscore
+        if (str[i] === '_') {
+            letraMaiuscula = true;
+        } 
+        // Se o caractere não for um underscore, adiciona ao resultado
+        else if (letraMaiuscula) {
+            resultado += str[i].toUpperCase();
+            letraMaiuscula = false;
+        } 
+        // Se não for um underscore adiciona normalmente
+        else {
+            resultado += str[i];
+        }
+    }
+    return resultado;
+}
+
+// Teste
+console.log(snakePraCamel('snake_case_para_camel_case'));
+*/
+
+
+/*
+    Crie uma função que retorne "true" caso todos os itens de um array obedecerem a uma condição 
+    (não pode usar map, every)
+*/
+
+/*
+    Crie uma função em que verifica a força da senha:
+    - Letra Maiuscula
+    - numero
+    - caractere especial
+    - minimo 8 careteres (obrigatorio)
+
+
+    forte: 4 requisitos
+    medio: pelo menos 3 requisitos
+    fraca: 2 requisitos
+    muito fraca: 1 requisito
+    invalida: 0 requisitos
+
+*/
+
+const readline = require('readline-sync');
+
+const senhaForte = (senha) => {
+    let maiuscula = false;
+    let minuscula = false;
+    let numero = false;
+    let especial = false;
+
+    // Verifica se a senha tem pelo menos 8 caracteres
+    if (senha.length < 8) {
+        return "Senha inválida";
+    }
+
+    for (let i = 0; i < senha.lenght; i++ ){
+
+        if (senha[i] >= 'A' && senha[i] <= 'Z') maiuscula = true;
+  
+        else if (senha[i] >= 'a' && senha[i] <= 'z') minuscula = true;
+       
+        else if (senha[i] >= '0' && senha[i] <= '9') numero = true;
+  
+        // Verifica se o caractere é especial (!@#$%^&*())
+        else if (   
+                senha[i] === '!' || 
+                senha[i] === '@' || 
+                senha[i] === '#' || 
+                senha[i] === '$' || 
+                senha[i] === '%' || 
+                senha[i] === '^' || 
+                senha[i] === '&' || 
+                senha[i] === '*' || 
+                senha[i] === '(' || 
+                senha[i] === ')'
+            ){
+            especial = true;
+        }
+    }
+    let requisitos = 0;
+    if (maiuscula)  requisitos++;
+    if (minuscula)  requisitos++;
+    if (numero)     requisitos++;
+    if (especial)   requisitos++;
+    
+    if (requisitos === 4)  return "Senha forte";
+    else if (requisitos >= 3)  return "Senha média";
+    else if (requisitos === 2)  return "Senha fraca";
+    else  return "Senha muito fraca";
+    
+}
+// Teste    
+var senha = readline.question("Informe a senha: ");
+console.log(senhaForte(senha));
 
